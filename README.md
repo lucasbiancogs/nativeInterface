@@ -1,4 +1,4 @@
-# NativeInterface
+# Native Interface
 
 The main idea of this project is to create a channel between flutter and the native code.
 

@@ -25,9 +25,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double _a = 0;
-  double _b = 0;
-  double _sum = 0;
+  int _a = 0;
+  int _b = 0;
+  int _sum = 0;
 
   Future<void> _callSum() async {
     /*
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SizedBox(height: 20),
               Text(
-                'Soma: ${_sum.toStringAsFixed(0)}',
+                'Soma: ${_sum}',
                 style: TextStyle(
                   fontSize: 30,
                 ),
@@ -79,13 +79,13 @@ class _MyHomePageState extends State<MyHomePage> {
               TextField(
                 keyboardType: TextInputType.number,
                 onChanged: (value) => setState(() {
-                  _a = double.tryParse(value) ?? 0.0;
+                  _a = int.tryParse(value) ?? 0;
                 }),
               ),
               TextField(
                 keyboardType: TextInputType.number,
                 onChanged: (value) => setState(() {
-                  _b = double.tryParse(value) ?? 0.0;
+                  _b = int.tryParse(value) ?? 0;
                 }),
               ),
               SizedBox(height: 10),
